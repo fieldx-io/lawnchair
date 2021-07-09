@@ -157,7 +157,7 @@
     <string name="action_open_drawer">Open app drawer</string>
     <string name="action_last_task">Open last app</string>
     <string name="action_open_widgets">Open widget drawer</string>
-    <string name="action_open_settings">Open launcher settings</string>
+    <string name="action_open_settings">Open home settings</string>
     <string name="action_open_overview">Open home screen pop-up</string>
     <string name="action_global_search">Open global search</string>
     <string name="action_app_search">Open app search</string>
@@ -532,7 +532,7 @@
     <string name="weather_icons_default">Default</string>
     <string name="pref_weather_icon_pack">Weather Icons</string>
     <string name="weather_icon_packs_not_supported">Not supported by your current weather source</string>
-    <string name="lawnchair_settings">Lawnchair Settings</string>
+    <string name="lawnchair_settings">Home Settings</string>
     <string name="customnavbar_install">Tap to install Custom Navigation Bar</string>
     <string name="customnavbar_back_hiding">Back button hiding</string>
     <string name="customnavbar_back_hiding_desc">Hide the back button when not needed</string>

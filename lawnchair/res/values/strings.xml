@@ -462,7 +462,7 @@
     <string name="suggested_action_content_description">“%1$s” opens in “%2$s”.</string>
 
     <string name="smartspace_setup_text">Tap to Set Up</string>
-    <string name="lawnchair_settings">Lawnchair Settings</string>
+    <string name="lawnchair_settings">Home Settings</string>
 
     <string name="label_voice_search">Voice Search</string>
     <string name="icon_pack">Icon Pack</string>

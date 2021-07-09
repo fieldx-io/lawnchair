@@ -111,6 +111,12 @@
         app:controllerClass=".DeveloperOptionsController"
         android:layout="@layout/home_preference" />
 
+    <ch.deletescape.lawnchair.sesame.preferences.EnableGoogleVersionPreference
+        android:defaultValue="false"
+        android:key="google_services"
+        android:icon="@drawable/ic_integrations"
+        android:title="Google Services" />
+
     <ch.deletescape.lawnchair.preferences.StyledIconPreference
         android:title="@string/about"
         android:summary="@string/about_pref_summary"

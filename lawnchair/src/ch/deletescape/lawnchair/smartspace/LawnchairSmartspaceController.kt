@@ -548,7 +548,7 @@ class LawnchairSmartspaceController(val context: Context) {
                 Pair(OnePlusWeatherDataProvider::class.java.name, R.string.weather_provider_oneplus_weather),
                 Pair(NowPlayingProvider::class.java.name, R.string.event_provider_now_playing),
                 Pair(NotificationUnreadProvider::class.java.name, R.string.event_provider_unread_notifications),
-                Pair(BatteryStatusProvider::class.java.name, R.string.battery_status),
+                //Pair(BatteryStatusProvider::class.java.name, R.string.battery_status),
                 Pair(PersonalityProvider::class.java.name, R.string.personality_provider),
                 Pair(OnboardingProvider::class.java.name, R.string.onbording),
                 Pair(CalendarEventProvider::class.java.name, R.string.smartspace_provider_calendar),

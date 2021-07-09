@@ -144,7 +144,7 @@ class LawnchairPreferences(val context: Context) : SharedPreferences.OnSharedPre
 
     // Smartspace
     val enableSmartspace by BooleanPref("pref_smartspace", lawnchairConfig.enableSmartspace)
-    val smartspaceTime by BooleanPref("pref_smartspace_time", false, refreshGrid)
+    val smartspaceTime by BooleanPref("pref_smartspace_time", true, refreshGrid)
     val smartspaceTimeAbove by BooleanPref("pref_smartspace_time_above", false, refreshGrid)
     val smartspaceTime24H by BooleanPref("pref_smartspace_time_24_h", false, refreshGrid)
     val smartspaceDate by BooleanPref("pref_smartspace_date", true, refreshGrid)
@@ -157,7 +157,7 @@ class LawnchairPreferences(val context: Context) : SharedPreferences.OnSharedPre
             ::updateSmartspaceProvider, listOf(eventProvider,
                                                NotificationUnreadProvider::class.java.name,
                                                NowPlayingProvider::class.java.name,
-                                               BatteryStatusProvider::class.java.name,
+                                               //BatteryStatusProvider::class.java.name,
                                                PersonalityProvider::class.java.name))
     var weatherApiKey by StringPref("pref_weatherApiKey", context.getString(R.string.default_owm_key))
     var weatherCity by StringPref("pref_weather_city", context.getString(R.string.default_city))
@@ -279,6 +279,7 @@ class LawnchairPreferences(val context: Context) : SharedPreferences.OnSharedPre
     var noFools by BooleanPref("pref_noFools2019", false) { Utilities.restartLauncher(context) }
     val enableFools get() = forceEnableFools || is1stApril()
     val showFools get() = !noFools && enableFools
+    var firstLaunch by BooleanPref("first_launch", true)
 
     private val was1stApril = is1stApril()
 

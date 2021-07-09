@@ -89,7 +89,7 @@ android {
             def drone = localProps.getProperty("public") == "true" || System.getenv("DRONE")
             versionName = majorMinor + (drone ? "-" : ".") + ciBuildNumber
         } else {
-            versionCode 2
+            versionCode 3
             versionName majorMinor
         }
 
@@ -213,7 +213,7 @@ android {
             if (localProps.getProperty("v1compat") != "true") {
                 applicationIdSuffix ".dev"
             }
-            versionNameSuffix "-dev"
+            versionNameSuffix ".ib"
         }
 
         ci {

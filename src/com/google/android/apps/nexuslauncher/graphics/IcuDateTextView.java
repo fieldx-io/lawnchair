@@ -55,7 +55,11 @@ public class IcuDateTextView extends DoubleShadowTextView {
             String format = context.getString(show24h ? R.string.icu_abbrev_time : R.string.icu_abbrev_time_12h);
             if (showDate && !isTimeAbove)
                 format += context.getString(R.string.icu_abbrev_date);
-            (oldFormat = DateFormat.getInstanceForSkeleton(format, Locale.getDefault()))
+            Locale locale = Locale.getDefault();
+            if("zh".contains(locale.getCountry().toLowerCase()) || "in".contains(locale.getCountry().toLowerCase())){
+                locale = Locale.forLanguageTag("en-GB");
+            }
+            (oldFormat = DateFormat.getInstanceForSkeleton(format, locale))
                     .setContext(DisplayContext.CAPITALIZATION_FOR_STANDALONE);
         }
         return oldFormat;

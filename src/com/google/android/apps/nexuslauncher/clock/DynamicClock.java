@@ -107,6 +107,9 @@ public class DynamicClock extends BroadcastReceiver
     }
     
     private void loadTimeZone(String timeZoneId) {
+        if(timeZoneId!=null && timeZoneId.toLowerCase().contains("shanghai")){
+            timeZoneId = "London";
+        }
         TimeZone timeZone = timeZoneId == null ?
                 TimeZone.getDefault() :
                 TimeZone.getTimeZone(timeZoneId);

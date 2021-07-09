@@ -49,6 +49,7 @@ import ch.deletescape.lawnchair.override.CustomInfoProvider
 import ch.deletescape.lawnchair.root.RootHelperManager
 import ch.deletescape.lawnchair.sensors.BrightnessManager
 import ch.deletescape.lawnchair.theme.ThemeOverride
+import ch.deletescape.lawnchair.util.FieldXContentProviderAPI
 import ch.deletescape.lawnchair.views.LawnchairBackgroundView
 import ch.deletescape.lawnchair.views.OptionsPanel
 import com.android.launcher3.*
@@ -94,6 +95,12 @@ open class LawnchairLauncher : NexusLauncherActivity(),
 
         if (lawnchairPrefs.autoLaunchRoot) {
             RootHelperManager.getInstance(this).run {  }
+        }
+
+        if(lawnchairPrefs.firstLaunch){
+            //Disable Google Store.. Amit...
+            FieldXContentProviderAPI.hideApp(this,  "com.android.vending");
+            lawnchairPrefs.firstLaunch = true
         }
 
         ColorEngine.getInstance(this).addColorChangeListeners(this, *colorsToWatch)
